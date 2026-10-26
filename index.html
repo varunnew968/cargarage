@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Performance Auto Care | Premium Car Garage in Austin, TX</title>
+    <meta name="description" content="Austin's premier automotive repair, performance tuning, and luxury detailing facility. Certified ASE master technicians, OEM parts, and state-of-the-art diagnostics.">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Apex Performance Auto Care | Austin, TX">
+    <meta property="og:description" content="Elite auto repair, performance tuning, and ceramic coating services in Austin. Book your appointment today.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://apexperformanceauto.com">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1200&q=80">
+
+    <!-- Favicon (Dynamic SVG Data URI) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230c0f12'/><path d='M20 65 L45 35 L70 35 L80 65 Z' fill='none' stroke='%23ff5500' stroke-width='8' stroke-linejoin='round'/><circle cx='35' cy='65' r='10' fill='%2300b4d8'/><circle cx='65' cy='65' r='10' fill='%2300b4d8'/></svg>">
+
+    <!-- Fonts: Rajdhani & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            base: '#0c0f12',
+                            card: '#141920',
+                            border: '#222a36',
+                            muted: '#1e2632'
+                        },
+                        brand: {
+                            orange: '#ff5500',
+                            blue: '#00b4d8',
+                            hover: '#e04a00'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Rajdhani', 'sans-serif'],
+                        body: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS Styles -->
+    <style>
+        /* Base styles & Scrollbar */
+        body {
+            background-color: #0c0f12;
+            color: #e2e8f0;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .font-heading {
+            font-family: 'Rajdhani', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0c0f12;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #ff5500;
+            border-radius: 4px;
+        }
+
+        /* Glassmorphism utility */
+        .glass-panel {
+            background: rgba(20, 25, 32, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .glass-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(255, 85, 0, 0.5);
+            box-shadow: 0 10px 30px -10px rgba(255, 85, 0, 0.2);
+            transform: translateY(-4px);
+        }
+
+        /* Carbon Fiber Texture Overlay */
+        .carbon-bg {
+            background-color: #0c0f12;
+            background-image: 
+                radial-gradient(hsla(0, 0%, 100%, 0.05) 2px, transparent 0),
+                radial-gradient(hsla(0, 0%, 100%, 0.05) 2px, #0c0f12 0);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+        }
+
+        /* Ken Burns Animation */
+        @keyframes kenburns {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .animate-kenburns {
+            animation: kenburns 20s infinite alternate ease-in-out;
+        }
+
+        /* Before/After Slider Styling */
+        .ba-slider-container {
+            position: relative;
+            user-select: none;
+            overflow: hidden;
+        }
+        .ba-after-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 50%;
+            overflow: hidden;
+        }
+
+        /* Custom Pulse Glow */
+        .glow-orange {
+            box-shadow: 0 0 25px rgba(255, 85, 0, 0.4);
+        }
+
+        /* Scroll Reveal Fallback */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+
+    <!-- Schema.org LocalBusiness Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoRepair",
+      "name": "Apex Performance Auto Care",
+      "image": "https://images.unsplash.com/photo-1617814076367-b759c7d7e738",
+      "@id": "https://apexperformanceauto.com",
+      "url": "https://apexperformanceauto.com",
+      "telephone": "(512) 555-0199",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1401 E 6th St",
+        "addressLocality": "Austin",
+        "addressRegion": "TX",
+        "postalCode": "78702",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 30.2635,
+        "longitude": -97.7274
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "07:30",
+        "closes": "18:00"
+      }
+    }
+    </script>
+</head>
+<body class="carbon-bg antialiased selection:bg-brand-orange selection:text-white">
+
+    <!-- PRELOADER -->
+    <div id="preloader" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#0c0f12] transition-opacity duration-500">
+        <div class="relative flex items-center justify-center mb-6">
+            <!-- Pulsing Halo -->
+            <div class="absolute w-24 h-24 rounded-full border-2 border-brand-orange animate-ping opacity-25"></div>
+            <!-- Custom SVG Logo -->
+            <svg class="w-16 h-16 text-brand-orange animate-pulse" viewBox="0 0 100 100" fill="none">
+                <path d="M15 70 L45 25 L85 25 L95 70 Z" stroke="currentColor" stroke-width="6" stroke-linejoin="round"/>
+                <circle cx="35" cy="70" r="12" fill="#00b4d8"/>
+                <circle cx="75" cy="70" r="12" fill="#00b4d8"/>
+                <path d="M40 45 L65 45" stroke="#ff5500" stroke-width="6" stroke-linecap="round"/>
+            </svg>
+        </div>
+        <h2 class="font-heading text-2xl font-bold tracking-widest text-white mb-3">APEX <span class="text-brand-orange">PERFORMANCE</span></h2>
+        <div class="w-48 h-1 bg-dark-muted rounded-full overflow-hidden">
+            <div id="preloader-bar" class="w-0 h-full bg-gradient-to-r from-brand-orange to-brand-blue transition-all duration-300"></div>
+        </div>
+    </div>
+
+    <!-- STICKY NAVBAR -->
+    <header id="navbar" class="fixed top-0 left-0 w-full z-40 transition-all duration-300 py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-panel rounded-2xl px-5 py-3 flex items-center justify-between">
+                <!-- Brand Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <svg class="w-10 h-10 text-brand-orange transition-transform duration-300 group-hover:rotate-12" viewBox="0 0 100 100" fill="none">
+                        <path d="M15 70 L45 25 L85 25 L95 70 Z" stroke="currentColor" stroke-width="8" stroke-linejoin="round"/>
+                        <circle cx="35" cy="70" r="10" fill="#00b4d8"/>
+                        <circle cx="75" cy="70" r="10" fill="#00b4d8"/>
+                        <path d="M38 45 L65 45" stroke="#ff5500" stroke-width="6" stroke-linecap="round"/>
+                    </svg>
+                    <div class="flex flex-col">
+                        <span class="font-heading text-xl font-bold leading-none tracking-wider text-white">APEX <span class="text-brand-orange">AUTO</span></span>
+                        <span class="text-[10px] tracking-widest uppercase text-gray-400 font-semibold">Austin, TX</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <nav class="hidden lg:flex items-center gap-8 text-sm font-medium">
+                    <a href="#home" class="nav-link text-white hover:text-brand-orange transition-colors">Home</a>
+                    <a href="#services" class="nav-link text-gray-300 hover:text-brand-orange transition-colors">Services</a>
+                    <a href="#about" class="nav-link text-gray-300 hover:text-brand-orange transition-colors">About</a>
+                    <a href="#process" class="nav-link text-gray-300 hover:text-brand-orange transition-colors">Process</a>
+                    <a href="#gallery" class="nav-link text-gray-300 hover:text-brand-orange transition-colors">Gallery</a>
+                    <a href="#pricing" class="nav-link text-gray-300 hover:text-brand-orange transition-colors">Pricing</a>
+                    <a href="#contact" class="nav-link text-gray-300 hover:text-brand-orange transition-colors">Contact</a>
+                </nav>
+
+                <!-- Actions -->
+                <div class="hidden sm:flex items-center gap-4">
+                    <a href="tel:5125550199" class="text-sm font-semibold text-gray-300 hover:text-brand-blue flex items-center gap-2">
+                        <i class="fa-solid fa-phone text-brand-orange"></i> (512) 555-0199
+                    </a>
+                    <a href="#booking" class="bg-gradient-to-r from-brand-orange to-red-600 hover:from-brand-hover hover:to-red-700 text-white font-heading font-bold text-sm px-5 py-2.5 rounded-xl transition-all shadow-lg hover:shadow-brand-orange/30">
+                        BOOK NOW
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <button id="menu-btn" class="lg:hidden text-gray-300 hover:text-white p-2 focus:outline-none" aria-label="Toggle Navigation">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobile-menu" class="hidden fixed inset-x-4 top-24 glass-panel rounded-2xl p-6 border border-dark-border z-50 flex flex-col gap-4 text-center transform transition-all duration-300">
+            <a href="#home" class="mobile-nav-link text-lg font-medium text-white hover:text-brand-orange">Home</a>
+            <a href="#services" class="mobile-nav-link text-lg font-medium text-gray-300 hover:text-brand-orange">Services</a>
+            <a href="#about" class="mobile-nav-link text-lg font-medium text-gray-300 hover:text-brand-orange">About Us</a>
+            <a href="#process" class="mobile-nav-link text-lg font-medium text-gray-300 hover:text-brand-orange">How It Works</a>
+            <a href="#gallery" class="mobile-nav-link text-lg font-medium text-gray-300 hover:text-brand-orange">Gallery</a>
+            <a href="#pricing" class="mobile-nav-link text-lg font-medium text-gray-300 hover:text-brand-orange">Pricing</a>
+            <a href="#contact" class="mobile-nav-link text-lg font-medium text-gray-300 hover:text-brand-orange">Contact</a>
+            <hr class="border-dark-border my-2">
+            <a href="tel:5125550199" class="text-brand-blue font-semibold flex items-center justify-center gap-2">
+                <i class="fa-solid fa-phone"></i> (512) 555-0199
+            </a>
+            <a href="#booking" class="mobile-nav-link bg-brand-orange text-white font-heading font-bold py-3 rounded-xl">
+                BOOK APPOINTMENT
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO CAROUSEL SECTION -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <!-- Slide Containers -->
+        <div id="hero-slider" class="absolute inset-0 w-full h-full">
+            <!-- Slide 1 -->
+            <div class="slide absolute inset-0 opacity-100 transition-opacity duration-1000">
+                <div class="absolute inset-0 bg-gradient-to-r from-dark-base via-dark-base/80 to-transparent z-10"></div>
+                <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1920&q=80" alt="Exotic Supercar Tuning" class="w-full h-full object-cover animate-kenburns">
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+                <div class="absolute inset-0 bg-gradient-to-r from-dark-base via-dark-base/80 to-transparent z-10"></div>
+                <img src="https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=1920&q=80" alt="Precision Mechanic Work" class="w-full h-full object-cover">
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+                <div class="absolute inset-0 bg-gradient-to-r from-dark-base via-dark-base/80 to-transparent z-10"></div>
+                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1920&q=80" alt="Porsche Maintenance" class="w-full h-full object-cover">
+            </div>
+        </div>
+
+        <!-- Hero Content Overlay -->
+        <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-32">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-orange/10 border border-brand-orange/30 mb-6">
+                    <span class="w-2 h-2 rounded-full bg-brand-orange animate-pulse"></span>
+                    <span class="text-xs font-semibold text-brand-orange tracking-wider uppercase">Austin's Premier Auto Facility</span>
+                </div>
+                <h1 id="hero-title" class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6 leading-none">
+                    PRECISION <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-brand-blue">PERFORMANCE</span> & REPAIR
+                </h1>
+                <p id="hero-subtitle" class="text-lg sm:text-xl text-gray-300 mb-8 max-w-2xl font-normal leading-relaxed">
+                    Dealer-level computer diagnostics, custom dyno tuning, and master mechanical care for sports, luxury, and daily drivers.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#booking" class="bg-gradient-to-r from-brand-orange to-red-600 hover:from-brand-hover hover:to-red-700 text-white font-heading font-bold text-lg px-8 py-4 rounded-xl transition-all shadow-lg hover:shadow-brand-orange/40 text-center">
+                        SCHEDULE SERVICE <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="tel:5125550199" class="glass-panel text-white hover:text-brand-blue font-heading font-bold text-lg px-8 py-4 rounded-xl transition-all text-center flex items-center justify-center gap-2 border-dark-border">
+                        <i class="fa-solid fa-phone text-brand-orange"></i> (512) 555-0199
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider Controls -->
+        <div class="absolute bottom-10 right-8 z-20 flex items-center gap-4">
+            <button id="prev-slide" class="w-12 h-12 rounded-full glass-panel flex items-center justify-center text-white hover:border-brand-orange transition-all" aria-label="Previous Slide">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <div class="flex gap-2" id="slider-dots">
+                <span class="dot w-3 h-3 rounded-full bg-brand-orange cursor-pointer"></span>
+                <span class="dot w-3 h-3 rounded-full bg-gray-600 cursor-pointer"></span>
+                <span class="dot w-3 h-3 rounded-full bg-gray-600 cursor-pointer"></span>
+            </div>
+            <button id="next-slide" class="w-12 h-12 rounded-full glass-panel flex items-center justify-center text-white hover:border-brand-orange transition-all" aria-label="Next Slide">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- QUICK STATS BAR -->
+    <section class="relative z-30 -mt-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="glass-panel rounded-2xl p-6 sm:p-8 grid grid-cols-2 md:grid-cols-4 gap-6 border border-dark-border divide-y md:divide-y-0 md:divide-x divide-dark-border">
+            <div class="text-center pt-4 md:pt-0">
+                <div class="text-3xl sm:text-5xl font-bold font-heading text-white mb-1">
+                    <span class="counter" data-target="15">0</span>+
+                </div>
+                <div class="text-xs sm:text-sm text-gray-400 font-medium">Years Experience</div>
+            </div>
+            <div class="text-center pt-4 md:pt-0">
+                <div class="text-3xl sm:text-5xl font-bold font-heading text-brand-orange mb-1">
+                    <span class="counter" data-target="12500">0</span>+
+                </div>
+                <div class="text-xs sm:text-sm text-gray-400 font-medium">Cars Serviced</div>
+            </div>
+            <div class="text-center pt-4 md:pt-0">
+                <div class="text-3xl sm:text-5xl font-bold font-heading text-white mb-1">
+                    <span class="counter" data-target="18">0</span>
+                </div>
+                <div class="text-xs sm:text-sm text-gray-400 font-medium">ASE Mechanics</div>
+            </div>
+            <div class="text-center pt-4 md:pt-0">
+                <div class="text-3xl sm:text-5xl font-bold font-heading text-brand-blue mb-1">
+                    <span class="counter" data-target="99">0</span>.4%
+                </div>
+                <div class="text-xs sm:text-sm text-gray-400 font-medium">Customer Satisfaction</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES GRID SECTION -->
+    <section id="services" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+            <h2 class="text-brand-orange font-bold text-sm tracking-widest uppercase mb-2">Expert Automotive Care</h2>
+            <h3 class="text-3xl sm:text-5xl font-bold text-white">OUR COMPREHENSIVE SERVICES</h3>
+            <p class="text-gray-400 mt-4">From routine maintenance to high-performance track builds, our certified technicians deliver dealer-quality craftsmanship.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Service 1 -->
+            <div class="glass-card rounded-2xl p-6 flex flex-col justify-between group reveal">
+                <div>
+                    <div class="w-14 h-14 rounded-xl bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center text-brand-orange text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-gauge-high"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2">Engine Tuning & Repair</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Complete diagnostics, ECU remapping, timing belt replacement, and major overhauls.</p>
+                </div>
+                <div class="flex items-center justify-between pt-4 border-t border-dark-border">
+                    <span class="text-xs text-brand-blue font-semibold">From $149</span>
+                    <a href="#booking" class="text-xs font-bold text-white hover:text-brand-orange flex items-center gap-1">BOOK <i class="fa-solid fa-chevron-right text-[10px]"></i></a>
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="glass-card rounded-2xl p-6 flex flex-col justify-between group reveal">
+                <div>
+                    <div class="w-14 h-14 rounded-xl bg-brand-blue/10 border border-brand-blue/30 flex items-center justify-center text-brand-blue text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-oil-can"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2">Precision Synthetic Oil</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Full synthetic Liqui Moly / Mobil 1 oils, OEM filter replacement, and multi-point inspection.</p>
+                </div>
+                <div class="flex items-center justify-between pt-4 border-t border-dark-border">
+                    <span class="text-xs text-brand-blue font-semibold">From $89</span>
+                    <a href="#booking" class="text-xs font-bold text-white hover:text-brand-orange flex items-center gap-1">BOOK <i class="fa-solid fa-chevron-right text-[10px]"></i></a>
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="glass-card rounded-2xl p-6 flex flex-col justify-between group reveal">
+                <div>
+                    <div class="w-14 h-14 rounded-xl bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center text-brand-orange text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-compact-disc"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2">Brake Systems Service</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Brembo/ceramic pad installs, rotor resurfacing, braided line upgrades, and fluid flush.</p>
+                </div>
+                <div class="flex items-center justify-between pt-4 border-t border-dark-border">
+                    <span class="text-xs text-brand-blue font-semibold">From $199</span>
+                    <a href="#booking" class="text-xs font-bold text-white hover:text-brand-orange flex items-center gap-1">BOOK <i class="fa-solid fa-chevron-right text-[10px]"></i></a>
+                </div>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="glass-card rounded-2xl p-6 flex flex-col justify-between group reveal">
+                <div>
+                    <div class="w-14 h-14 rounded-xl bg-brand-blue/10 border border-brand-blue/30 flex items-center justify-center text-brand-blue text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-arrows-to-dot"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2">Laser Alignment & Tires</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">3D laser wheel alignment, high-speed balancing, tire mounting, and camber adjustment.</p>
+                </div>
+                <div class="flex items-center justify-between pt-4 border-t border-dark-border">
+                    <span class="text-xs text-brand-blue font-semibold">From $119</span>
+                    <a href="#booking" class="text-xs font-bold text-white hover:text-brand-orange flex items-center gap-1">BOOK <i class="fa-solid fa-chevron-right text-[10px]"></i></a>
+                </div>
+            </div>
+
+            <!-- Service 5 -->
+            <div class="glass-card rounded-2xl p-6 flex flex-col justify-between group reveal">
+                <div>
+                    <div class="w-14 h-14 rounded-xl bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center text-brand-orange text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-snowflake"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2">A/C & Climate Control</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">R134a & R1234yf refrigerant recharge, compressor repairs, leak detection, and cabin sanitizing.</p>
+                </div>
+                <div class="flex items-center justify-between pt-4 border-t border-dark-border">
+                    <span class="text-xs text-brand-blue font-semibold">From $129</span>
+                    <a href="#booking" class="text-xs font-bold text-white hover:text-brand-orange flex items-center gap-1">BOOK <i class="fa-solid fa-chevron-right text-[10px]"></i></a>
+                </div>
+            </div>
+
+            <!-- Service 6 -->
+            <div class="glass-card rounded-2xl p-6 flex flex-col justify-between group reveal">
+                <div>
+                    <div class="w-14 h-14 rounded-xl bg-brand-blue/10 border border-brand-blue/30 flex items-center justify-center text-brand-blue text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-spray-can-sparkles"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2">Ceramic Coating & Detail</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Paint correction, 9H nano-ceramic coating application, and concours interior detailing.</p>
+                </div>
+                <div class="flex items-center justify-between pt-4 border-t border-dark-border">
+                    <span class="text-xs text-brand-blue font-semibold">From $299</span>
+                    <a href="#booking" class="text-xs font-bold text-white hover:text-brand-orange flex items-center gap-1">BOOK <i class="fa-solid fa-chevron-right text-[10px]"></i></a>
+                </div>
+            </div>
+
+            <!-- Service 7 -->
+            <div class="glass-card rounded-2xl p-6 flex flex-col justify-between group reveal">
+                <div>
+                    <div class="w-14 h-14 rounded-xl bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center text-brand-orange text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-car-battery"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2">Electrical & Battery</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Alternator replacement, wiring loom repairs, AGM battery testing, and coding.</p>
+                </div>
+                <div class="flex items-center justify-between pt-4 border-t border-dark-border">
+                    <span class="text-xs text-brand-blue font-semibold">From $99</span>
+                    <a href="#booking" class="text-xs font-bold text-white hover:text-brand-orange flex items-center gap-1">BOOK <i class="fa-solid fa-chevron-right text-[10px]"></i></a>
+                </div>
+            </div>
+
+            <!-- Service 8 -->
+            <div class="glass-card rounded-2xl p-6 flex flex-col justify-between group reveal">
+                <div>
+                    <div class="w-14 h-14 rounded-xl bg-brand-blue/10 border border-brand-blue/30 flex items-center justify-center text-brand-blue text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2">Digital Diagnostics</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">OEM scanner diagnostic reports, check engine light resolution, and sensor calibration.</p>
+                </div>
+                <div class="flex items-center justify-between pt-4 border-t border-dark-border">
+                    <span class="text-xs text-brand-blue font-semibold">From $75</span>
+                    <a href="#booking" class="text-xs font-bold text-white hover:text-brand-orange flex items-center gap-1">BOOK <i class="fa-solid fa-chevron-right text-[10px]"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-24 bg-dark-card/50 border-y border-dark-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Image Stack -->
+                <div class="relative reveal">
+                    <div class="aspect-video rounded-2xl overflow-hidden border border-dark-border">
+                        <img src="https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?auto=format&fit=crop&w=1000&q=80" alt="Apex Workshop Facility" class="w-full h-full object-cover">
+                    </div>
+                    <!-- Floating Badge -->
+                    <div class="absolute -bottom-6 -right-6 glass-panel rounded-2xl p-6 border border-brand-orange/40 hidden sm:flex items-center gap-4">
+                        <i class="fa-solid fa-award text-4xl text-brand-orange"></i>
+                        <div>
+                            <div class="text-lg font-bold font-heading text-white">ASE MASTER CERTIFIED</div>
+                            <div class="text-xs text-gray-400">Factory Trained Technicians</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Content -->
+                <div class="reveal">
+                    <h2 class="text-brand-orange font-bold text-sm tracking-widest uppercase mb-2">Why Apex Auto Care?</h2>
+                    <h3 class="text-3xl sm:text-4xl font-bold text-white mb-6">CRAFTING AUTOMOTIVE EXCELLENCE IN AUSTIN SINCE 2009</h3>
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        At Apex Performance Auto Care, we bridge the gap between high-priced dealership service centers and local repair shops. Our state-of-the-art facility features 8 dedicated service bays equipped with modern diagnostic tools and dyno tuning bays.
+                    </p>
+
+                    <!-- Features List -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-brand-orange"></i>
+                            <span class="text-sm text-gray-300">100% OEM & Performance Parts</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-brand-orange"></i>
+                            <span class="text-sm text-gray-300">24-Month / 24k-Mile Warranty</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-brand-orange"></i>
+                            <span class="text-sm text-gray-300">Transparent Digital Quotes</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-brand-orange"></i>
+                            <span class="text-sm text-gray-300">Complimentary Loaner Vehicles</span>
+                        </div>
+                    </div>
+
+                    <a href="#booking" class="inline-block bg-brand-orange hover:bg-brand-hover text-white font-heading font-bold px-8 py-3.5 rounded-xl transition-all">
+                        EXPERIENCE THE APEX DIFFERENCE
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS PROCESS -->
+    <section id="process" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+            <h2 class="text-brand-blue font-bold text-sm tracking-widest uppercase mb-2">Seamless Experience</h2>
+            <h3 class="text-3xl sm:text-5xl font-bold text-white">HOW IT WORKS</h3>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+            <!-- Step 1 -->
+            <div class="glass-card rounded-2xl p-6 text-center relative reveal">
+                <div class="w-12 h-12 rounded-full bg-brand-orange text-white font-bold font-heading text-xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-brand-orange/30">1</div>
+                <h4 class="text-lg font-bold text-white mb-2">Book Online</h4>
+                <p class="text-gray-400 text-sm">Select your service, choose a time slot, and confirm instantly via SMS/Email.</p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="glass-card rounded-2xl p-6 text-center relative reveal">
+                <div class="w-12 h-12 rounded-full bg-dark-muted border border-brand-orange text-white font-bold font-heading text-xl flex items-center justify-center mx-auto mb-6">2</div>
+                <h4 class="text-lg font-bold text-white mb-2">Digital Inspection</h4>
+                <p class="text-gray-400 text-sm">Receive a detailed photo/video inspection report directly on your phone.</p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="glass-card rounded-2xl p-6 text-center relative reveal">
+                <div class="w-12 h-12 rounded-full bg-dark-muted border border-brand-orange text-white font-bold font-heading text-xl flex items-center justify-center mx-auto mb-6">3</div>
+                <h4 class="text-lg font-bold text-white mb-2">Precision Service</h4>
+                <p class="text-gray-400 text-sm">Our ASE technicians execute approved repairs with OEM parts and tools.</p>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="glass-card rounded-2xl p-6 text-center relative reveal">
+                <div class="w-12 h-12 rounded-full bg-brand-blue text-white font-bold font-heading text-xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-brand-blue/30">4</div>
+                <h4 class="text-lg font-bold text-white mb-2">Drive Away</h4>
+                <p class="text-gray-400 text-sm">Quality road test, washed vehicle delivery, and full warranty coverage.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BEFORE & AFTER SHOWCASE -->
+    <section class="py-24 bg-dark-card/30 border-y border-dark-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <h2 class="text-brand-orange font-bold text-sm tracking-widest uppercase mb-2">Real Transformations</h2>
+                <h3 class="text-3xl sm:text-5xl font-bold text-white">BEFORE & AFTER DETAILING</h3>
+                <p class="text-gray-400 mt-2">Drag the slider to view paint correction and multi-stage ceramic coating results.</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="ba-slider-container aspect-video rounded-2xl border border-dark-border overflow-hidden shadow-2xl">
+                    <!-- Before Image (Base) -->
+                    <img src="https://images.unsplash.com/photo-1607603750909-408e193868c7?auto=format&fit=crop&w=1200&q=80" alt="Car Paint Before Restoration" class="w-full h-full object-cover">
+                    <!-- Label Before -->
+                    <span class="absolute top-4 left-4 bg-black/70 text-white text-xs px-3 py-1 rounded-md font-bold uppercase tracking-wider z-10">Before</span>
+                    
+                    <!-- After Image (Overlay) -->
+                    <div id="ba-after" class="ba-after-img">
+                        <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1200&q=80" alt="Car Paint After Ceramic Coating" class="absolute top-0 left-0 w-full h-full object-cover max-w-none" style="width: 100%;">
+                        <span class="absolute top-4 right-4 bg-brand-orange text-white text-xs px-3 py-1 rounded-md font-bold uppercase tracking-wider z-10">After 9H Ceramic</span>
+                    </div>
+
+                    <!-- Range Slider Handle -->
+                    <input type="range" min="0" max="100" value="50" id="ba-range" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-30">
+                    <div id="ba-divider" class="absolute top-0 bottom-0 w-1 bg-brand-orange z-20 pointer-events-none" style="left: 50%;">
+                        <div class="w-8 h-8 rounded-full bg-brand-orange text-white flex items-center justify-center shadow-lg -ml-3.5 mt-48">
+                            <i class="fa-solid fa-arrows-left-right text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FILTERABLE GALLERY -->
+    <section id="gallery" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12 reveal">
+            <h2 class="text-brand-orange font-bold text-sm tracking-widest uppercase mb-2">Our Work</h2>
+            <h3 class="text-3xl sm:text-5xl font-bold text-white">WORKSHOP GALLERY</h3>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="flex flex-wrap justify-center gap-3 mb-12">
+            <button class="gallery-filter-btn px-5 py-2 rounded-xl text-sm font-semibold bg-brand-orange text-white" data-filter="all">All Projects</button>
+            <button class="gallery-filter-btn px-5 py-2 rounded-xl text-sm font-semibold glass-panel text-gray-300 hover:text-white" data-filter="repairs">Repairs</button>
+            <button class="gallery-filter-btn px-5 py-2 rounded-xl text-sm font-semibold glass-panel text-gray-300 hover:text-white" data-filter="tuning">Dyno Tuning</button>
+            <button class="gallery-filter-btn px-5 py-2 rounded-xl text-sm font-semibold glass-panel text-gray-300 hover:text-white" data-filter="detailing">Detailing</button>
+        </div>
+
+        <!-- Image Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
+            <div class="gallery-item tuning rounded-2xl overflow-hidden glass-panel border border-dark-border group cursor-pointer aspect-square relative" data-src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738">
+                <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=600&q=80" alt="McLaren ECU Tuning" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end">
+                    <span class="text-xs text-brand-orange font-bold uppercase">Performance Tuning</span>
+                    <h4 class="text-lg font-bold text-white">McLaren 720S Stage 2 Remap</h4>
+                </div>
+            </div>
+
+            <div class="gallery-item repairs rounded-2xl overflow-hidden glass-panel border border-dark-border group cursor-pointer aspect-square relative" data-src="https://images.unsplash.com/photo-1486006920555-c77dce18193b">
+                <img src="https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=600&q=80" alt="Engine Overhaul" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end">
+                    <span class="text-xs text-brand-orange font-bold uppercase">Engine Repair</span>
+                    <h4 class="text-lg font-bold text-white">BMW M5 Twin Turbo Rebuild</h4>
+                </div>
+            </div>
+
+            <div class="gallery-item detailing rounded-2xl overflow-hidden glass-panel border border-dark-border group cursor-pointer aspect-square relative" data-src="https://images.unsplash.com/photo-1503376780353-7e6692767b70">
+                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=600&q=80" alt="Porsche GT3 Ceramic Coating" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end">
+                    <span class="text-xs text-brand-orange font-bold uppercase">Ceramic Coating</span>
+                    <h4 class="text-lg font-bold text-white">Porsche 911 GT3 RS Detail</h4>
+                </div>
+            </div>
+
+            <div class="gallery-item repairs rounded-2xl overflow-hidden glass-panel border border-dark-border group cursor-pointer aspect-square relative" data-src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc">
+                <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=600&q=80" alt="Custom Exhaust Fabrication" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end">
+                    <span class="text-xs text-brand-orange font-bold uppercase">Exhaust System</span>
+                    <h4 class="text-lg font-bold text-white">Titanium Exhaust Installation</h4>
+                </div>
+            </div>
+
+            <div class="gallery-item tuning rounded-2xl overflow-hidden glass-panel border border-dark-border group cursor-pointer aspect-square relative" data-src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd">
+                <img src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=600&q=80" alt="Audi R8 Alignment" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end">
+                    <span class="text-xs text-brand-orange font-bold uppercase">Laser Alignment</span>
+                    <h4 class="text-lg font-bold text-white">Audi R8 V10 Setup</h4>
+                </div>
+            </div>
+
+            <div class="gallery-item detailing rounded-2xl overflow-hidden glass-panel border border-dark-border group cursor-pointer aspect-square relative" data-src="https://images.unsplash.com/photo-1607603750909-408e193868c7">
+                <img src="https://images.unsplash.com/photo-1607603750909-408e193868c7?auto=format&fit=crop&w=600&q=80" alt="Interior Restoration" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end">
+                    <span class="text-xs text-brand-orange font-bold uppercase">Interior Care</span>
+                    <h4 class="text-lg font-bold text-white">Custom Leather Restoration</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 hidden items-center justify-center p-4">
+        <button id="close-lightbox" class="absolute top-6 right-6 text-white text-3xl hover:text-brand-orange" aria-label="Close Lightbox">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <img id="lightbox-img" src="" alt="Enlarged Project Photo" class="max-w-full max-h-[85vh] rounded-xl border border-dark-border">
+    </div>
+
+    <!-- PRICING PACKAGES -->
+    <section id="pricing" class="py-24 bg-dark-card/50 border-y border-dark-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <h2 class="text-brand-orange font-bold text-sm tracking-widest uppercase mb-2">Transparent Pricing</h2>
+                <h3 class="text-3xl sm:text-5xl font-bold text-white">SERVICE PACKAGES</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Basic Plan -->
+                <div class="glass-card rounded-2xl p-8 border border-dark-border flex flex-col justify-between reveal">
+                    <div>
+                        <h4 class="text-xl font-bold text-white mb-2">Essential Care</h4>
+                        <p class="text-gray-400 text-sm mb-6">Routine maintenance for daily commuters.</p>
+                        <div class="text-4xl font-bold font-heading text-white mb-6">$129 <span class="text-xs text-gray-400 font-normal">/ visit</span></div>
+                        <ul class="space-y-3 text-sm text-gray-300 mb-8">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Synthetic Oil Change</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Tire Rotation & Pressure Check</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> 40-Point Safety Inspection</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Brake Pad & Fluid Check</li>
+                        </ul>
+                    </div>
+                    <a href="#booking" class="w-full text-center bg-dark-muted hover:bg-brand-orange text-white font-heading font-bold py-3 rounded-xl transition-all">SELECT PLAN</a>
+                </div>
+
+                <!-- Featured Plan -->
+                <div class="glass-card rounded-2xl p-8 border-2 border-brand-orange relative glow-orange flex flex-col justify-between transform md:-translate-y-4 reveal">
+                    <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-orange text-white text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider">Most Popular</span>
+                    <div>
+                        <h4 class="text-xl font-bold text-white mb-2">Performance Tune</h4>
+                        <p class="text-gray-400 text-sm mb-6">Comprehensive care for sports cars & SUVs.</p>
+                        <div class="text-4xl font-bold font-heading text-brand-orange mb-6">$299 <span class="text-xs text-gray-400 font-normal">/ visit</span></div>
+                        <ul class="space-y-3 text-sm text-gray-300 mb-8">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Everything in Essential Care</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Full Computer OBD-II Diagnostics</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Laser Wheel Alignment</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Engine Bay Power Wash</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Air & Cabin Filter Replacement</li>
+                        </ul>
+                    </div>
+                    <a href="#booking" class="w-full text-center bg-brand-orange hover:bg-brand-hover text-white font-heading font-bold py-3 rounded-xl transition-all">SELECT PLAN</a>
+                </div>
+
+                <!-- Ultimate Plan -->
+                <div class="glass-card rounded-2xl p-8 border border-dark-border flex flex-col justify-between reveal">
+                    <div>
+                        <h4 class="text-xl font-bold text-white mb-2">Ultimate Overhaul</h4>
+                        <p class="text-gray-400 text-sm mb-6">Full track prep & high-performance service.</p>
+                        <div class="text-4xl font-bold font-heading text-white mb-6">$599 <span class="text-xs text-gray-400 font-normal">/ visit</span></div>
+                        <ul class="space-y-3 text-sm text-gray-300 mb-8">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Everything in Performance Tune</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Dyno Performance Run & Tuning</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> High-Temp Brake Fluid Flush</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Complete Ceramic Coating Prep</li>
+                        </ul>
+                    </div>
+                    <a href="#booking" class="w-full text-center bg-dark-muted hover:bg-brand-orange text-white font-heading font-bold py-3 rounded-xl transition-all">SELECT PLAN</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS CAROUSEL -->
+    <section class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+            <h2 class="text-brand-blue font-bold text-sm tracking-widest uppercase mb-2">Testimonials</h2>
+            <h3 class="text-3xl sm:text-5xl font-bold text-white">WHAT OUR CLIENTS SAY</h3>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Review 1 -->
+            <div class="glass-card rounded-2xl p-6 flex flex-col justify-between reveal">
+                <div>
+                    <div class="flex text-amber-400 mb-4 gap-1">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm italic mb-6">"Brought my Porsche GT3 in for custom dyno tuning and brake installation. The team at Apex is world-class. Transparent quotes and exceptional attention to detail."</p>
+                </div>
+                <div class="flex items-center gap-3">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Marcus Vance" class="w-10 h-10 rounded-full object-cover">
+                    <div>
+                        <h4 class="text-white text-sm font-bold">Marcus Vance</h4>
+                        <span class="text-xs text-brand-orange">Porsche 911 GT3 Owner</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="glass-card rounded-2xl p-6 flex flex-col justify-between reveal">
+                <div>
+                    <div class="flex text-amber-400 mb-4 gap-1">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm italic mb-6">"Finding a shop in Austin that treats your BMW M5 like their own is rare. Apex fixed an intricate electrical fault that the dealership couldn't figure out!"</p>
+                </div>
+                <div class="flex items-center gap-3">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="David Sterling" class="w-10 h-10 rounded-full object-cover">
+                    <div>
+                        <h4 class="text-white text-sm font-bold">David Sterling</h4>
+                        <span class="text-xs text-brand-orange">BMW M5 Competition Owner</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="glass-card rounded-2xl p-6 flex flex-col justify-between reveal">
+                <div>
+                    <div class="flex text-amber-400 mb-4 gap-1">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm italic mb-6">"The ceramic coating job turned out insane! My Range Rover looks glossier than the day I bought it. Super professional digital inspection updates."</p>
+                </div>
+                <div class="flex items-center gap-3">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=100&q=80" alt="Elena Rostova" class="w-10 h-10 rounded-full object-cover">
+                    <div>
+                        <h4 class="text-white text-sm font-bold">Elena Rostova</h4>
+                        <span class="text-xs text-brand-orange">Range Rover Sport Owner</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOKING & CONTACT SECTION -->
+    <section id="booking" class="py-24 bg-dark-card/50 border-t border-dark-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                
+                <!-- Interactive Booking Form -->
+                <div id="contact" class="glass-panel rounded-2xl p-8 border border-dark-border reveal">
+                    <h3 class="text-2xl font-bold font-heading text-white mb-2">SCHEDULE YOUR SERVICE</h3>
+                    <p class="text-gray-400 text-sm mb-6">Fill out the form below to receive instant SMS confirmation.</p>
+
+                    <form id="booking-form" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-300 uppercase mb-1">Full Name</label>
+                                <input type="text" required placeholder="John Doe" class="w-full bg-dark-base border border-dark-border rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-orange">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-300 uppercase mb-1">Phone Number</label>
+                                <input type="tel" required placeholder="(512) 555-0123" class="w-full bg-dark-base border border-dark-border rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-orange">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-300 uppercase mb-1">Vehicle Make & Model</label>
+                                <input type="text" required placeholder="e.g. 2021 Porsche 911" class="w-full bg-dark-base border border-dark-border rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-orange">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-300 uppercase mb-1">Requested Service</label>
+                                <select class="w-full bg-dark-base border border-dark-border rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-orange">
+                                    <option>Engine Tuning & Repair</option>
+                                    <option>Synthetic Oil Change</option>
+                                    <option>Brake Service</option>
+                                    <option>Laser Alignment & Tires</option>
+                                    <option>Ceramic Coating / Detailing</option>
+                                    <option>Computer Diagnostics</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-300 uppercase mb-1">Preferred Date</label>
+                            <input type="date" required class="w-full bg-dark-base border border-dark-border rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-orange">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-300 uppercase mb-1">Notes / Specific Issues</label>
+                            <textarea rows="3" placeholder="Describe any noises, warning lights, or requested mods..." class="w-full bg-dark-base border border-dark-border rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-orange"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-gradient-to-r from-brand-orange to-red-600 hover:from-brand-hover hover:to-red-700 text-white font-heading font-bold text-lg py-4 rounded-xl transition-all shadow-lg hover:shadow-brand-orange/30">
+                            CONFIRM APPOINTMENT BOOKING
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Info & Live Map -->
+                <div class="flex flex-col justify-between reveal">
+                    <div>
+                        <h3 class="text-2xl font-bold font-heading text-white mb-6">VISIT OUR AUSTIN SHOP</h3>
+                        
+                        <div class="space-y-6 mb-8">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center text-brand-orange text-xl shrink-0">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-bold">Address</h4>
+                                    <p class="text-gray-300 text-sm">1401 E 6th St, Austin, TX 78702</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-brand-blue/10 border border-brand-blue/30 flex items-center justify-center text-brand-blue text-xl shrink-0">
+                                    <i class="fa-solid fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-bold">Working Hours</h4>
+                                    <p class="text-gray-300 text-sm">Monday - Friday: 7:30 AM - 6:00 PM</p>
+                                    <p class="text-gray-300 text-sm">Saturday: 8:00 AM - 3:00 PM | Sunday: Closed</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center text-brand-orange text-xl shrink-0">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-bold">Direct Contact</h4>
+                                    <p class="text-gray-300 text-sm">Phone: (512) 555-0199</p>
+                                    <p class="text-gray-300 text-sm">Email: service@apexperformanceauto.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Styled Google Map Frame -->
+                    <div class="aspect-video w-full rounded-2xl overflow-hidden border border-dark-border">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3445.892697843478!2d-97.7274!3d30.2635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b599a0000001%3A0x123456789abcdef!2sE%206th%20St%2C%20Austin%2C%20TX%2078702!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" class="w-full h-full border-0 grayscale invert opacity-80" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark-base border-t border-dark-border py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                <!-- Brand Info -->
+                <div class="space-y-4">
+                    <a href="#" class="flex items-center gap-3">
+                        <svg class="w-8 h-8 text-brand-orange" viewBox="0 0 100 100" fill="none">
+                            <path d="M15 70 L45 25 L85 25 L95 70 Z" stroke="currentColor" stroke-width="8" stroke-linejoin="round"/>
+                            <circle cx="35" cy="70" r="10" fill="#00b4d8"/>
+                            <circle cx="75" cy="70" r="10" fill="#00b4d8"/>
+                        </svg>
+                        <span class="font-heading text-lg font-bold text-white">APEX <span class="text-brand-orange">AUTO</span></span>
+                    </a>
+                    <p class="text-gray-400 text-sm">Austin's high-performance automotive facility specializing in German, European, and Exotic vehicle maintenance.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold font-heading mb-4">QUICK LINKS</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#services" class="hover:text-brand-orange transition-colors">Services</a></li>
+                        <li><a href="#about" class="hover:text-brand-orange transition-colors">About Us</a></li>
+                        <li><a href="#gallery" class="hover:text-brand-orange transition-colors">Gallery</a></li>
+                        <li><a href="#pricing" class="hover:text-brand-orange transition-colors">Pricing Packages</a></li>
+                        <li><a href="#contact" class="hover:text-brand-orange transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services Directory -->
+                <div>
+                    <h4 class="text-white font-bold font-heading mb-4">SERVICES</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#services" class="hover:text-brand-orange transition-colors">ECU Dyno Tuning</a></li>
+                        <li><a href="#services" class="hover:text-brand-orange transition-colors">Brake Service & Upgrades</a></li>
+                        <li><a href="#services" class="hover:text-brand-orange transition-colors">Ceramic Coating</a></li>
+                        <li><a href="#services" class="hover:text-brand-orange transition-colors">Laser Alignment</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="text-white font-bold font-heading mb-4">NEWSLETTER</h4>
+                    <p class="text-gray-400 text-sm mb-4">Subscribe for track day announcements and seasonal specials.</p>
+                    <div class="flex gap-2">
+                        <input type="email" placeholder="Your email..." class="w-full bg-dark-card border border-dark-border rounded-xl px-4 py-2 text-sm text-white focus:outline-none focus:border-brand-orange">
+                        <button class="bg-brand-orange text-white px-4 py-2 rounded-xl font-bold"><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-dark-border flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+                <p>&copy; 2026 Apex Performance Auto Care. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-gray-300">Privacy Policy</a>
+                    <a href="#" class="hover:text-gray-300">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING ACTIONS -->
+    <a href="https://wa.me/15125550199" target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-40 bg-emerald-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-2xl hover:scale-110 transition-transform" aria-label="Direct WhatsApp Chat">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <button id="back-to-top" class="fixed bottom-24 right-6 z-40 glass-panel text-white w-12 h-12 rounded-full flex items-center justify-center text-lg opacity-0 transition-opacity hover:border-brand-orange" aria-label="Back to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- SUCCESS MODAL FOR BOOKING -->
+    <div id="booking-modal" class="fixed inset-0 z-50 bg-black/80 hidden items-center justify-center p-4">
+        <div class="glass-panel rounded-2xl p-8 max-w-md w-full border border-brand-orange text-center">
+            <div class="w-16 h-16 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-3xl mx-auto mb-4">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3 class="text-2xl font-bold font-heading text-white mb-2">BOOKING CONFIRMED!</h3>
+            <p class="text-gray-300 text-sm mb-6">Thank you for scheduling with Apex Auto. Our service advisor will contact you within 15 minutes to confirm details.</p>
+            <button id="close-modal" class="bg-brand-orange text-white font-heading font-bold px-8 py-3 rounded-xl w-full">CLOSE</button>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // --- 1. Preloader Logic ---
+        window.addEventListener('load', () => {
+            const bar = document.getElementById('preloader-bar');
+            const preloader = document.getElementById('preloader');
+            bar.style.width = '100%';
+            setTimeout(() => {
+                preloader.style.opacity = '0';
+                setTimeout(() => preloader.style.display = 'none', 500);
+            }, 400);
+        });
+
+        // --- 2. Navbar Sticky Shrink & Mobile Drawer ---
+        const navbar = document.getElementById('navbar');
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('py-2');
+                navbar.classList.remove('py-4');
+            } else {
+                navbar.classList.add('py-4');
+                navbar.classList.remove('py-2');
+            }
+
+            // Back to top button visibility
+            const backToTop = document.getElementById('back-to-top');
+            if (window.scrollY > 500) {
+                backToTop.classList.remove('opacity-0');
+                backToTop.classList.add('opacity-100');
+            } else {
+                backToTop.classList.remove('opacity-100');
+                backToTop.classList.add('opacity-0');
+            }
+        });
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+
+        document.getElementById('back-to-top').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // --- 3. Hero Slide Carousel ---
+        const slides = document.querySelectorAll('#hero-slider .slide');
+        const dots = document.querySelectorAll('#slider-dots .dot');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach((s, i) => {
+                s.style.opacity = i === index ? '1' : '0';
+            });
+            dots.forEach((d, i) => {
+                d.className = `dot w-3 h-3 rounded-full cursor-pointer ${i === index ? 'bg-brand-orange' : 'bg-gray-600'}`;
+            });
+            currentSlide = index;
+        }
+
+        document.getElementById('next-slide').addEventListener('click', () => {
+            showSlide((currentSlide + 1) % slides.length);
+        });
+        document.getElementById('prev-slide').addEventListener('click', () => {
+            showSlide((currentSlide - 1 + slides.length) % slides.length);
+        });
+        dots.forEach((dot, i) => dot.addEventListener('click', () => showSlide(i)));
+
+        // Auto transition hero slides
+        setInterval(() => {
+            showSlide((currentSlide + 1) % slides.length);
+        }, 6000);
+
+        // --- 4. Counter Animation on Scroll ---
+        const counters = document.querySelectorAll('.counter');
+        let animated = false;
+
+        function animateCounters() {
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                let count = 0;
+                const speed = target / 50;
+
+                const updateCount = () => {
+                    count += speed;
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count);
+                        setTimeout(updateCount, 30);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCount();
+            });
+        }
+
+        // --- 5. Scroll Reveal Intersection Observer ---
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    if (!animated && entry.target.querySelector('.counter')) {
+                        animateCounters();
+                        animated = true;
+                    }
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // --- 6. Before/After Interactive Range Slider ---
+        const baRange = document.getElementById('ba-range');
+        const baAfter = document.getElementById('ba-after');
+        const baDivider = document.getElementById('ba-divider');
+
+        if (baRange) {
+            baRange.addEventListener('input', (e) => {
+                const val = e.target.value;
+                baAfter.style.width = `${val}%`;
+                baDivider.style.left = `${val}%`;
+            });
+        }
+
+        // --- 7. Filterable Gallery & Lightbox ---
+        const filterBtns = document.querySelectorAll('.gallery-filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-brand-orange', 'text-white');
+                    b.classList.add('glass-panel', 'text-gray-300');
+                });
+                btn.classList.add('bg-brand-orange', 'text-white');
+                btn.classList.remove('glass-panel', 'text-gray-300');
+
+                const filter = btn.getAttribute('data-filter');
+                galleryItems.forEach(item => {
+                    if (filter === 'all' || item.classList.contains(filter)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const src = item.getAttribute('data-src');
+                lightboxImg.src = `${src}?auto=format&fit=crop&w=1200&q=80`;
+                lightbox.classList.remove('hidden');
+                lightbox.classList.add('flex');
+            });
+        });
+
+        document.getElementById('close-lightbox').addEventListener('click', () => {
+            lightbox.classList.add('hidden');
+            lightbox.classList.remove('flex');
+        });
+
+        // --- 8. Booking Form Modal Handler ---
+        const bookingForm = document.getElementById('booking-form');
+        const bookingModal = document.getElementById('booking-modal');
+        const closeModal = document.getElementById('close-modal');
+
+        bookingForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            bookingModal.classList.remove('hidden');
+            bookingModal.classList.add('flex');
+            bookingForm.reset();
+        });
+
+        closeModal.addEventListener('click', () => {
+            bookingModal.classList.add('hidden');
+            bookingModal.classList.remove('flex');
+        });
+    </script>
+</body>
+</html>
